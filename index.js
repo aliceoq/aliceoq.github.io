@@ -3,7 +3,6 @@ const DEFAULT_BREAK = 300;
 
 var count = DEFAULT_FOCUS;
 var isFocus = true;
-var isCounting = false;
 var timer;
 
 function intToHourFormat(number) {
@@ -24,14 +23,13 @@ function counter() {
     pause();
     isFocus = !isFocus;
     isFocus ? (count = DEFAULT_FOCUS) : (count = DEFAULT_BREAK);
+    document.getElementById('timer').innerHTML = intToHourFormat(count);
   }
 }
 
 function start() {
-  if (isCounting) return;
-
-  isCounting = true;
   count -= 1;
+  disableButtons(true);
   document.getElementById('timer').innerHTML = intToHourFormat(count);
 
   if (count > 0) timer = window.setInterval(counter, 1000);
@@ -45,7 +43,13 @@ function reset() {
 
 function pause() {
   window.clearInterval(timer);
-  isCounting = false;
+  disableButtons(false);
+}
+
+function disableButtons(value) {
+  document.getElementById('start').disabled = value;
+  document.getElementById('pause').disabled = !value;
 }
 
 document.getElementById('timer').innerHTML = intToHourFormat(count);
+disableButtons(false);
