@@ -56,3 +56,12 @@
   position: relative;
   top: 1px;
 }
+
+@media (max-width: 600px) {
+  .sapo-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
