@@ -55,7 +55,7 @@ export const Projects: Project[] = [
     repo: "https://github.com/aliceoq/tetriste",
     description:
       "In this project, a simple Tetris game was created using only JavaScript and HTML/CSS. It features functionalities such as score counting, various piece shapes, and increasing speed based on score increments.",
-    technologies: ["Javascript", "CSS"],
+    technologies: ["Javascript", "HTML/CSS"],
     status: "Finished",
   },
   {
@@ -65,7 +65,7 @@ export const Projects: Project[] = [
     repo: "https://github.com/aliceoq/hora-de-chorar",
     description:
       "Project for organizing class schedules to check for schedule conflicts and find the best combination of classes. Currently, it is not yet completed.",
-    technologies: ["React", "Javascript", "CSS"],
+    technologies: ["React", "Javascript", "HTML/CSS"],
     status: "Unfinished",
   },
 ];
