@@ -1,20 +1,20 @@
 const DarkTheme = {
   color: {
-    background: "#2A2A2A",
-    primary: "#EA638C",
-    title: "#EA638C",
-    subtitle: "#2B59C3",
-    highlight: "#EA638C",
+    background: "#181A1B",
+    backgroundHighlight: "rgb(146 146 146 / 5%)",
     text: "#F5F5F5",
+    title: "#A0D982",
+    highlight: "#7BC950",
+    label: "rgb(123 201 80 / 34%)"
   },
 
   border: {
-    radius: "15px",
+    radius: "8px",
     style: "2px solid #736681",
   },
 
   font: {
-    small: "0.5rem",
+    small: "0.8rem",
     default: "1rem",
     big: "2rem",
     bigger: "3rem",
@@ -24,20 +24,20 @@ const DarkTheme = {
 const LightTheme = {
   color: {
     background: "#F5F5F5",
-    primary: "#7BC950",
+    backgroundHighlight: "rgb(236 236 236 / 40%)",
+    text: "#181A1B",
     title: "#7BC950",
-    subtitle: "#2B59C3",
-    highlight: "#EA638C",
-    text: "#2A2A2A",
+    highlight: "#5eac35",
+    label: "rgb(94 172 53 / 40%)",
   },
 
   border: {
-    radius: "15px",
+    radius: "8px",
     style: "2px solid #736681",
   },
 
   font: {
-    small: "0.5rem",
+    small: "0.8rem",
     default: "1rem",
     big: "2rem",
     bigger: "3rem",

@@ -8,6 +8,7 @@ export type Experience = {
 };
 
 export type Project = {
+  emoji: string;
   name: string;
   url?: string;
   repo?: string;

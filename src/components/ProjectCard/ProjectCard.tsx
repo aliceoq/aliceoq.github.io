@@ -1,5 +1,14 @@
 import { Project } from "../../utils/types";
-import placeholder from './../../assets/placeholder.png';
+import { GithubSimple, OpenLink } from "../Icons/Icon";
+import TechnologyContainer from "../TechnologyContainer/TechnologyContainer";
+import {
+  CardContainer,
+  Description,
+  Title,
+  ContentContainer,
+  Links,
+  Icon,
+} from "./style";
 
 interface Props {
   project: Project;
@@ -7,16 +16,22 @@ interface Props {
 
 function ProjectCard({ project }: Props) {
   return (
-    <div>
-      <img alt="Project" src={placeholder} style={{"maxWidth": "100%"}}/>
-      <div>
-        {project.name}
-      </div>
-      <div>{project.description}</div>
-      <div>git</div>
-      <div>url</div>
-      {/* <Technologies technologies={experience.technologies}/> */}
-    </div>
+    <CardContainer>
+      <Icon>{project.emoji}</Icon>
+      <ContentContainer>
+        <Title>{project.name}</Title>
+        <Description>{project.description}</Description>
+        <Links>
+          <a href={project.url ?? ""}>
+            <OpenLink size="small" />
+          </a>
+          <a href={project.repo ?? ""}>
+            <GithubSimple size="small" />
+          </a>
+        </Links>
+        <TechnologyContainer technologies={project.technologies} />
+      </ContentContainer>
+    </CardContainer>
   );
 }
 

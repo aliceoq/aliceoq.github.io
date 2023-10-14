@@ -1,4 +1,12 @@
 import { Experience } from "../../utils/types";
+import TechnologyContainer from "../TechnologyContainer/TechnologyContainer";
+import {
+  CardContainer,
+  ContentContainer,
+  Description,
+  PeriodContainer,
+  Title,
+} from "./style";
 
 interface Props {
   experience: Experience;
@@ -6,17 +14,18 @@ interface Props {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <div>
-      <div>{experience.period}</div>
-      <div>
-        <div>
-          {experience.position} @{" "}
-          <a href={experience.companyUrl}>{experience.company}</a>
-        </div>
-        <div>{experience.description}</div>
-        {/* <Technologies technologies={experience.technologies}/> */}
-      </div>
-    </div>
+    <a href={experience.companyUrl}>
+      <CardContainer>
+        <PeriodContainer>{experience.period}</PeriodContainer>
+        <ContentContainer>
+          <Title>
+            {experience.position} @ {experience.company}
+          </Title>
+          <Description>{experience.description}</Description>
+          <TechnologyContainer technologies={experience.technologies}/>
+        </ContentContainer>
+      </CardContainer>
+    </a>
   );
 }
 

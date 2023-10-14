@@ -5,6 +5,13 @@ export const SvgIcon = styled.div<IconProps>`
   svg {
     width: ${(props) => iconSizes[props.size].width};
     height: ${(props) => iconSizes[props.size].height};
-    fill: ${(props) => props.theme.color.text};
+    fill: currentColor;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    svg {
+      fill: ${(props) => props.theme.color.highlight};
+    }
   }
 `;
