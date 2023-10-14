@@ -19,7 +19,7 @@ function ProjectCard({ project }: Props) {
     <CardContainer>
       <Icon>{project.emoji}</Icon>
       <ContentContainer>
-        <Title>{project.name}</Title>
+        <Title>{project.name} {project.status === "Finished" ? "✅" : "🚧"}</Title>
         <Description>{project.description}</Description>
         <Links>
           <a href={project.url ?? ""}>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  wrap: wrap;
+  flex-wrap: wrap;
   gap: 0.5rem;
   font-size: ${(props) => props.theme.font.small};
 `;

@@ -29,6 +29,10 @@ const Body = styled.div`
   margin: 0% 10%;
   width: 100%;
   justify-content: center;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -121,6 +125,11 @@ const SectionContent = styled.div`
   gap: 1rem;
 `
 
+const About = styled.div`
+  line-height: 1.3rem;
+  font-size: ${(props) => props.theme.font.small};
+`
+
 export {
   AppContainer,
   ThemeButton,
@@ -134,4 +143,5 @@ export {
   SectionTitle,
   SectionContent,
   IconButton,
+  About,
 };

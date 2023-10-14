@@ -4,8 +4,8 @@ const DarkTheme = {
     backgroundHighlight: "rgb(146 146 146 / 5%)",
     text: "#F5F5F5",
     title: "#A0D982",
-    highlight: "#7BC950",
-    label: "rgb(123 201 80 / 34%)"
+    highlight: "#7CB05C",
+    label: "rgb(124 176 92 / 46%)"
   },
 
   border: {
@@ -26,7 +26,7 @@ const LightTheme = {
     background: "#F5F5F5",
     backgroundHighlight: "rgb(236 236 236 / 40%)",
     text: "#181A1B",
-    title: "#7BC950",
+    title: "#7CB05C",
     highlight: "#5eac35",
     label: "rgb(94 172 53 / 40%)",
   },
